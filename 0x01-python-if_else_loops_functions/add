@@ -1,0 +1,11 @@
+#!/bin/bash
+for file in *; do
+	if [ -f "$file" ]; then
+		# Check if the file is not ignored (modify this condition based on your needs)
+		if [[ ! "$file" =~ ^(\.git|\.gitignore|\.DS_Store|Thumbs\.db)$ ]]; then
+			# Perform the git add and commit for each file
+			git add "$file"
+			git commit -m "Add $file"
+		fi
+	fi
+done
