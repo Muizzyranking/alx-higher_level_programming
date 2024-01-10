@@ -1,8 +1,0 @@
-#!/bin/bash
-
-for file in *; do
-	if [ -f "$file" ]; then
-		git add "$file"
-		git commit -m "$file "
-	fi
-done
