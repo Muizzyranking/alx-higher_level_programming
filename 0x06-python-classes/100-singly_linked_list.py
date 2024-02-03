@@ -38,14 +38,6 @@ class SinglyLinkedList:
     def __init__(self):
         self.head = None
 
-    def __str__(self):
-        current = self.head
-        string = ""
-        while current is not None:
-            string += str(current.data)
-            current = current.next_node
-        return string
-
     def sorted_insert(self, value):
         new = Node(value)
         if self.head is None:
@@ -64,3 +56,12 @@ class SinglyLinkedList:
             current = current.next_node
         current.next_node = new
         return
+
+    def __str__(self):
+        """Print the list"""
+        values = []
+        tmp = self.head
+        while tmp is not None:
+            values.append(str(tmp.data))
+            tmp = tmp.next_node
+        return "\n".join(values)
