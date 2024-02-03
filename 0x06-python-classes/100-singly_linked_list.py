@@ -42,7 +42,7 @@ class SinglyLinkedList:
         current = self.head
         string = ""
         while current is not None:
-            string += str(current.data) + "\n"
+            string += str(current.data)
             current = current.next_node
         return string
 
