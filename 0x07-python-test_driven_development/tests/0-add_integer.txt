@@ -1,0 +1,36 @@
+===========================
+How to use 0-add_integer.py
+============================
+
+
+This module defines a function that adds two integers.
+
+Using 00-add_integer.py
+=======================
+
+
+```0-add_integer.py``` defines a function that adds two integers. It takes two arguments, ```a``` and ```b```, both of which are integers. It returns the sum of the two integers.
+
+::
+	>>> add_integer = __import__('0-add_integer').add_integer
+	>>> add_integer(1, 2)
+	3
+	
+Works with negative numbers too.
+::
+	>>> (add_integer(100, -2))
+	98
+
+
+Use default value 98 for b if only one argument is passed
+::
+	>>> print(add_integer(2))
+	100
+
+Works with floats too
+
+::
+	>>> print(add_integer(100.3, -2))
+	98
+
+
