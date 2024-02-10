@@ -1,0 +1,13 @@
+#!/bin/bash
+for file in *; do
+  # Skip directories
+  if [ -f "$file" ]; then
+    # Add the file to the staging area
+    git add "$file"
+
+    # Commit with the file name as the commit message
+    git commit -m "Add $file"
+  fi
+done
+
+echo "Files added and committed successfully."
