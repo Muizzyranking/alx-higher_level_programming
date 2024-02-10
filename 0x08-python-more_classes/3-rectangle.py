@@ -1,4 +1,3 @@
-
 #!/usr/bin/python3
 """Defines a rectangle"""
 
@@ -47,7 +46,7 @@ class Rectangle:
         """Returns the rectangle perimeter"""
         if self.__width == 0 or self.__height == 0:
             return 0
-    
+
     def __str__(self):
         """Returns the printable representation of the rectangle"""
         if self.__width == 0 or self.__height == 0:
