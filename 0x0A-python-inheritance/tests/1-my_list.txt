@@ -1,0 +1,27 @@
+MyList is a custom list class that inherits from the built-in list class.
+
+Usage:
+>>> MyList = __import__('1-my_list').MyList
+>>> my_list_instance = MyList([3, 1, 4, 1, 5, 9, 2, 6, 5])
+>>> my_list_instance.print_sorted()
+[1, 1, 2, 3, 4, 5, 5, 6, 9]
+
+>>> another_list_instance = MyList([10, 8, 12, 6, 4])
+>>> another_list_instance.print_sorted()
+[4, 6, 8, 10, 12]
+
+Note: The elements in the list are assumed to be integers for this example.
+
+---
+
+print_sorted() method:
+Prints the list in ascending sorted order.
+
+Usage:
+>>> my_list_instance = MyList([3, 1, 4, 1, 5, 9, 2, 6, 5])
+>>> my_list_instance.print_sorted()
+[1, 1, 2, 3, 4, 5, 5, 6, 9]
+
+>>> another_list_instance = MyList([10, 8, 12, 6, 4])
+>>> another_list_instance.print_sorted()
+[4, 6, 8, 10, 12]
