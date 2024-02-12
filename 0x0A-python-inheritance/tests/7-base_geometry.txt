@@ -88,3 +88,8 @@ Test non-ints:
     ...     print("[{}] {}".format(e.__class__.__name__, e))
     ...
     [TypeError] integer_validator() missing 1 required positional argument: 'value'
+
+    >>> try:
+    ...     bg.integer_validator("age", True)
+    ... except Exception as e:
+    ...     print("[{}] {}".format(e.__class__.__name__, e))
