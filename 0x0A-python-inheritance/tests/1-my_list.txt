@@ -85,9 +85,7 @@ Ensures that print_sorted() does not modify the original list.
 Usage:
 >>> my_list_instance = MyList([3, 1, 4, 1, 5, 9, 2, 6, 5])
 >>> sorted_list = my_list_instance.print_sorted()
->>> sorted_list
 [1, 1, 2, 3, 4, 5, 5, 6, 9]
-
-
+>>> sorted_list
 >>> my_list_instance
 [3, 1, 4, 1, 5, 9, 2, 6, 5]
