@@ -19,6 +19,5 @@ if (args.length < 2) {
       secondBiggest = args[i];
     }
   }
+  console.log(secondBiggest);
 }
-
-console.log(secondBiggest);
