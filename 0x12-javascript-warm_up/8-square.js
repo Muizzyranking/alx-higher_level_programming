@@ -3,7 +3,7 @@
 
 const noOfTimes = process.argv[2];
 if (isNaN(noOfTimes) || noOfTimes === undefined) {
-  console.log('Missing number of occurrences');
+  console.log('Missing size');
 } else {
   let i;
   for (i = 0; i < noOfTimes; i++) {
