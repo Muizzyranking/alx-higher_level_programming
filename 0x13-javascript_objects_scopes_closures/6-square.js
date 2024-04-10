@@ -1,9 +1,9 @@
 #!/usr/bin/node
 // square that inherits from Rectangle
 
-const Square = require('./5-square');
+const SquareImport = require('./5-square');
 
-class Square extends Square {
+class Square extends SquareImport {
   constructor (size) {
     super(size, size);
   }
