@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" List all states that start with 'N' """
+""" safely List all states that start with 'N' """
 
 from sys import argv
 import MySQLdb
