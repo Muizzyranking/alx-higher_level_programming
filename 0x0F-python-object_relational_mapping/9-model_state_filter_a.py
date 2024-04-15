@@ -6,7 +6,7 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
 
-if __name__ == "main":
+if __name__ == "__main__":
     sql_user = argv[1]
     sql_pass = argv[2]
     sql_db = argv[3]
