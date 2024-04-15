@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""List states with 'a' in the name"""
 
 from sys import argv
 from model_state import Base, State
