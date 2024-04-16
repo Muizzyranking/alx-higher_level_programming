@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Lists all Cities objects, and corresponding States objects, contained in the"""
+"""Lists all Cities objects, and corresponding States objects"""
 
 
 from sys import argv
