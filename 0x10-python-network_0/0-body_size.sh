@@ -3,4 +3,4 @@
 
 URL="$1"
 
-curl -s "$URL" | wc -c
+curl -s $URL | wc -c
