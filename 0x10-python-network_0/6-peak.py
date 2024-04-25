@@ -10,15 +10,15 @@ def find_peak(list_of_integers):
     if len(list_of_integers) == 1:
         return list_of_integers[0]
 
-    mid = len(list_of_integers) // 2
+    left = 0
+    right = len(list_of_integers) - 1
 
-    if list_of_integers[mid] >= list_of_integers[mid - 1] \
-            and list_of_integers[mid] >= list_of_integers[mid + 1]:
-        return list_of_integers[mid]
+    while left < right:
+        mid = (left + right) // 2
 
-    # Check if peak is in the left half
-    if mid > 0 and list_of_integers[mid - 1] > list_of_integers[mid]:
-        return find_peak(list_of_integers[:mid])
+        if list_of_integers[mid] < list_of_integers[mid + 1]:
+            left = mid + 1
+        else:
+            right = mid
 
-    # Peak must be in the right half
-    return find_peak(list_of_integers[mid + 1:])
+    return list_of_integers[left] if list_of_integers else None
