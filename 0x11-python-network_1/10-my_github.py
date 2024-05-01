@@ -10,6 +10,6 @@ from requests.auth import HTTPBasicAuth
 
 
 if __name__ == "__main__":
-    authenticate = HTTPBasicAuth(sys.argv[1], sys.argv[2])
-    r = requests.get("https://api.github.com/user", auth=authenticate)
+    auth_ = HTTPBasicAuth(sys.argv[1], sys.argv[2])
+    r = requests.get("https://api.github.com/user", auth=auth_)
     print(r.json().get("id"))
