@@ -18,6 +18,7 @@ function getCount (API_URL) {
         for (j = 0; j < characters.length; j++) {
           if (characters[j].includes('/' + characterId + '/')) {
             count += 1;
+            break;
           }
         }
       }
