@@ -4,24 +4,16 @@ const request = require('request');
 
 function getCount (API_URL) {
   const url = API_URL;
-  const characterUrl = 'https://swapi-api.alx-tools.com/api/people/18/';
   request(url, (error, response, body) => {
     if (error) {
       console.log(error);
     } else {
-      let count = 0;
-      let i, j;
-      const films = JSON.parse(body);
-      const filmCount = films.count;
-      for (i = 0; i < filmCount; i++) {
-        const characters = films.results[i].characters;
-        for (j = 0; j < characters.length; j++) {
-          if (characters[j] === characterUrl) {
-            count += 1;
-            break;
-          }
-        }
-      }
+      const results = JSON.parse(body).results;
+      const count = results.reduce((count, movie) => {
+        return movie.characters.find(character => character.endsWith('/18/'))
+          ? count + 1
+          : count;
+      }, 0);
       console.log(count);
     }
   });
