@@ -3,7 +3,7 @@
 
 const request = require('request');
 
-function getTitle(id) {
+function getTitle (id) {
   const url = `https://swapi-api.hbtn.io/api/films/${id}`;
   request(url, (error, response, body) => {
     if (error) {
