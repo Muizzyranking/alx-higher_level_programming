@@ -16,7 +16,7 @@ function getCount (API_URL) {
       for (i = 0; i < filmCount; i++) {
         const characters = films.results[i].characters;
         for (j = 0; j < characters.length; j++) {
-          if (characters[j] === characterUrl) {
+          if (characters[j] == characterUrl) {
             count += 1;
             break;
           }
