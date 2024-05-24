@@ -4,7 +4,7 @@ const request = require('request');
 const characterId = 18;
 
 function getCount (API_URL) {
-  const url = `${API_URL}`;
+  const url = API_URL;
   request(url, (error, response, body) => {
     if (error) {
       console.log(error);
