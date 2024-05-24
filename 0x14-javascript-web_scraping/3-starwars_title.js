@@ -18,7 +18,7 @@ if (process.argv.length === 3) {
   if (isNaN(process.argv[2])) {
     console.log('Usage: ./3-starwars_title.js <movie_id>');
     console.log('movie_id must be an integer');
-    return;
+    process.exit(1);
   }
   getTitle(process.argv[2]);
 } else {
