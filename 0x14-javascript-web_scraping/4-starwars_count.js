@@ -1,7 +1,7 @@
 #!/usr/bin/node
 
 const request = require('request');
-const character_id = 18;
+const characterId = 18;
 
 function getCount (API_URL) {
   const url = `${API_URL}`;
@@ -12,12 +12,11 @@ function getCount (API_URL) {
       let count = 0;
       let i, j;
       const films = JSON.parse(body);
-      const film_count = films.count;
-      // console.log(film_count);
-      for (i = 0; i < film_count; i++) {
+      const filmCount = films.count;
+      for (i = 0; i < filmCount; i++) {
         const characters = films.results[i].characters;
         for (j = 0; j < characters.length; j++) {
-          if (characters[j].includes(character_id)) {
+          if (characters[j].includes(characterId)) {
             count += 1;
           }
         }
